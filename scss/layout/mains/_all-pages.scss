@@ -1,0 +1,91 @@
+body{
+    main{
+        .lengueta{
+            background-color: black;
+            width: 24%;
+            margin-top: 2%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            height: 34px;
+            margin-bottom: 40px;
+            h2{
+                color: white;
+                font-size: 26px;
+                margin-left: 38px;
+            }
+        }
+        .cont-tira{
+            margin-left: 2%;
+            .tira1{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                .producto{
+                    .cont-img{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .parte-baja{
+                        .nombre-produ{
+                            margin: 0%;
+                        }
+                        .precio{
+                            margin: 0%;
+                        }
+                       div{
+                        display: flex;
+                        justify-content: end;
+                        margin-right: 10px;
+                        .boton-ver{
+                            height: 38px;
+                            width: 126px;
+                            border-radius: 20px;
+                            border-color: black;
+                            background-color: black;
+                            color: white;
+                            font-size: 23px;
+                        }
+                       }
+                    }
+                }
+            }
+            .tira2{
+                display: flex;
+                gap: 20px;
+                margin-top: 9%;
+                .producto{
+                    .parte-baja{
+                        .nombre-produ{
+                            margin: 0%;
+                        }
+                        .precio{
+                            margin: 0%;
+                        }
+                       div{
+                        display: flex;
+                        justify-content: end;
+                        margin-right: 10px;
+                        .boton-ver{
+                            height: 38px;
+                            width: 126px;
+                            border-radius: 20px;
+                            border-color: black;
+                            background-color: black;
+                            color: white;
+                            font-size: 23px;
+                        }
+                       }
+                    }
+                }
+            }
+        }
+        .banner-medio{
+            margin-top: 7%;
+            img{
+                width: 100%;
+               
+            }
+        }
+    }
+}

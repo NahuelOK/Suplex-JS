@@ -1,0 +1,75 @@
+body{
+    footer{
+        background-color:black;
+        margin-top: 50px;
+        .redes{
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .ig{
+          width: 50px;
+          height: 50px;
+          margin-left: 5px;
+        }
+        .ig:hover{
+            border: solid rgba(0, 0, 0, 0) 2px;
+        }
+        .whats{
+            width: 50px;
+            height: 50px;
+            margin-left: 24px;
+        }
+        .whats:hover{
+            border: solid rgba(0, 0, 0, 0) 2px;
+        }
+        .contactanos{
+            color: white;
+            font-size: 26px;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 32px;
+        }
+        .adress{
+            display: flex;
+            justify-content: center;
+            h3{
+                color: white;
+                font-size: 20px;  
+                margin-bottom: 18px;
+            }
+        }
+        .mail{
+            display: flex;
+            justify-content: center;
+            color: white;
+            margin-bottom: 80px;
+            h3{
+                font-size: 20px;
+            }
+        }
+        .medios-d-p{
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            margin-bottom: 40px;
+            h3{
+                font-size: 20px;
+                margin-left: 8px;
+            }
+            img{
+                margin-left: 40px;
+                width: 634px;
+            }
+        }
+        .creador{
+            margin: 0px;
+            color: white;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

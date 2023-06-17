@@ -1,0 +1,50 @@
+body{
+    header{
+        .navbar{
+            background-color: black;
+            height: 56px;
+            .container-fluid{
+                gap: 43%;
+                .navbar-brand{
+                    img{
+                        height: 40px;
+                    }
+                }
+                .collapse{
+                    .navbar-nav{
+                        gap: 42px;
+                        display: flex;
+                        align-items: center;
+                        .nav-link{
+                            color: white; 
+                            font-size: 20px;
+                            .btn{
+                                margin-top: 4px;
+                                .carrito{
+                                    height: 28px;
+                                }
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: black;
+                            .dropdown-divider{
+                                border-color: white;
+                            }
+                            .dropdown-item{
+                                color: white;
+                            }
+                            .dropdown-item:hover{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .banner{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
