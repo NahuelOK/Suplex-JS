@@ -116,14 +116,17 @@ body{
                     justify-content: center;
                     margin: 15px;
                 }
-                input{
+                .comprar-ya{
                     width: 100%;
-                    height: 40px;
-                    background-color:black;
-                    border-radius: 12px;
-                    font-weight: bold;
-                    color: white;
-                    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+                    input{
+                        width: 100%;
+                        height: 40px;
+                        background-color:black;
+                        border-radius: 12px;
+                        font-weight: bold;
+                        color: white;
+                        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+                    }
                 }
             }
             .abajo-d{

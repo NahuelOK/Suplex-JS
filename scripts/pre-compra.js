@@ -44,7 +44,7 @@ function preCompraRender(){
              <input type="button" value="Agregar Al Carrito" onclick="pushCarro()">
          </div>
          <div class="boton-comprar-ahora">
-             <input type="button" value="Comprar Ahora">
+         <a class="comprar-ya" href="../pages/carrito.html"><input type="button" value="Comprar Ahora" onclick="comprarYa()"></a>
          </div>
      </form>
      <div class="abajo-d">
@@ -79,6 +79,13 @@ function pushCarro(){
         }
       }).showToast();
       renderBotonCarrito()
+}
+function comprarYa(){
+    let productoCargado = localStorage.getItem("producto")
+    const carrito = cargarCarroLS();
+    carrito.push(productoCargado)
+    guardarEnCarro(carrito);
+    renderBotonCarrito()
 }
 
 function cantidadProdcutosCarro(){

@@ -251,14 +251,16 @@ body main .pre-compra {
       display: flex;
       justify-content: center;
       margin: 15px; }
-    body main .pre-compra .pre-der input {
-      width: 100%;
-      height: 40px;
-      background-color: black;
-      border-radius: 12px;
-      font-weight: bold;
-      color: white;
-      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
+    body main .pre-compra .pre-der .comprar-ya {
+      width: 100%; }
+      body main .pre-compra .pre-der .comprar-ya input {
+        width: 100%;
+        height: 40px;
+        background-color: black;
+        border-radius: 12px;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
   body main .pre-compra .abajo-d {
     display: flex;
     flex-direction: column;
