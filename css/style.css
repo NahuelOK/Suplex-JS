@@ -275,3 +275,43 @@ body main .pre-compra {
 
 body main .img-carrito-muestra {
   width: 32px; }
+
+body main .carro-vacio {
+  margin-top: 12%;
+  margin-left: 2%;
+  margin-bottom: 4%; }
+  body main .carro-vacio .carro-vacio-h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: sans-serif; }
+  body main .carro-vacio .carro-vacio-h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    font-family: sans-serif; }
+  body main .carro-vacio .opciones-pago-carro {
+    font-size: 20px;
+    margin-bottom: 28px;
+    font-family: sans-serif; }
+  body main .carro-vacio .boton-carro-vacio {
+    height: 68px;
+    width: 20%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 16px;
+    margin-bottom: 24px; }
+  body main .carro-vacio .boton-carro-vacio:hover {
+    color: black;
+    background-color: white; }
+  body main .carro-vacio .tarjetas {
+    width: 48%; }
+
+body main .pagar {
+  height: 32px;
+  width: 128px;
+  border-radius: 20px;
+  border-color: black;
+  background-color: black;
+  color: white;
+  font-size: 19px; }
