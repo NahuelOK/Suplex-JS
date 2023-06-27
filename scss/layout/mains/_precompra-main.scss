@@ -18,7 +18,7 @@ body{
                 }
                 .contenedor-info{
                     border: solid rgb(20, 20, 20) 1px;
-                    width: 79%;
+                    width: 80%;
                     padding: 10px;
                     border-radius: 10px;
                     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
@@ -32,13 +32,16 @@ body{
             }
             .pre-der{
                 grid-column: 2/2;
-                margin-right: 10%;
+                margin-right: 68px;
                 margin-top: 12%;
                 border: solid #141414 1px;
                 border-radius: 10px;
                 padding: 40px;
                 height: 72%;
                 box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+                .limite{
+                    width: 300px;
+                }
                 .titulito{
                     font-size: 39px;
                     color: black;

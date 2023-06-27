@@ -3,7 +3,7 @@ function preCompraRender() {
     let contenido = `
       <div class="pre-compra">
         <div class="pre-izq">
-            <h1>${producto.nombre}</h1>
+              <h1>${producto.nombre}</h1>
             <div class="imagen-pre">
                 <img src="../${producto.imgXXL}" alt="img">
             </div>
@@ -11,7 +11,9 @@ function preCompraRender() {
             <div class="contenedor-info">${producto.info}</div>
         </div>
         <div class="pre-der">
-            <h3>${producto.nombre}</h3>
+            <div class="limite">
+                <h3>${producto.nombre}</h3>
+            </div>
             <p>$${producto.precio}</p>
             <p>12 cuotas de: $${producto.cuotas}</p>
             <a href="">Consultar Formas de Entrega</a>
@@ -50,7 +52,7 @@ function preCompraRender() {
             <div class="abajo-d">
                 <h2>¿Tenés alguna pregunta?</h2>
                 <p>Estamos Para Ayudarte!</p>
-                <a href="">Preguntas Frecuentes Sobre Productos</a>
+                <a href="../pages/preg-frecuentes.html" target="_blank">Preguntas Frecuentes Sobre Productos</a>
             </div>
         </div>
       </div>`;
@@ -130,16 +132,21 @@ function preCompraRender() {
   }
   
   function renderBotonCarrito() {
+    const carro = JSON.parse(localStorage.getItem("carrito"));
+    let cantidadTotal = 0;
+    for (const producto of carro) {
+      cantidadTotal += producto.cantidad;
+    }
     const botonCarrito = document.getElementById("boton-carro");
     const contenido = `
       <button type="button" class="btn position-relative">
-          <img class="carrito" src="../assets/Carro.png" alt="logo carro">
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        ${cantidadProdcutosCarro()}
-      </span>
-    </button>`;
+        <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          ${cantidadTotal}
+        </span>
+      </button>
+    `;
     botonCarrito.innerHTML = contenido;
   }
-  
-  renderBotonCarrito();
+  renderBotonCarrito()
   

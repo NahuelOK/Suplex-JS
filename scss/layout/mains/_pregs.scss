@@ -1,0 +1,24 @@
+body{
+    main{
+        .h1-pregs{
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            font-size: 46px;
+        }
+        .todas-pregs{
+            width: 90%;
+            margin-left: 5%;
+            .div-pregs{
+                margin-bottom: 7%;
+            }
+            .h2-pregs{
+                font-size: 30px;
+            }
+            .p-pregs{
+                font-size: 19px;
+            }
+        }
+    }
+}

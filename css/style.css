@@ -174,7 +174,7 @@ body main .pre-compra {
       font-size: 26px; }
     body main .pre-compra .pre-izq .contenedor-info {
       border: solid #141414 1px;
-      width: 79%;
+      width: 80%;
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
@@ -184,13 +184,15 @@ body main .pre-compra {
         width: 80%; }
   body main .pre-compra .pre-der {
     grid-column: 2/2;
-    margin-right: 10%;
+    margin-right: 68px;
     margin-top: 12%;
     border: solid #141414 1px;
     border-radius: 10px;
     padding: 40px;
     height: 72%;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
+    body main .pre-compra .pre-der .limite {
+      width: 300px; }
     body main .pre-compra .pre-der .titulito {
       font-size: 39px;
       color: black; }
@@ -315,3 +317,20 @@ body main .pagar {
   background-color: black;
   color: white;
   font-size: 19px; }
+
+body main .h1-pregs {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  font-size: 46px; }
+
+body main .todas-pregs {
+  width: 90%;
+  margin-left: 5%; }
+  body main .todas-pregs .div-pregs {
+    margin-bottom: 7%; }
+  body main .todas-pregs .h2-pregs {
+    font-size: 30px; }
+  body main .todas-pregs .p-pregs {
+    font-size: 19px; }
