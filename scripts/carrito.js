@@ -40,6 +40,9 @@ renderBotonCarrito()
         <th scope="col">Producto</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Precio /u</th>
+        <th scope="col">C (-1)</th>
+        <th scope="col">C (+1)</th>
+        <th scope="col">Borrar</th>
         <td>&nbsp;</td>
       </tr>
     </thead>`;
@@ -52,6 +55,8 @@ renderBotonCarrito()
           <td>${producto.nombre}</td>
           <td>(X ${producto.cantidad})</td>
           <td>$${producto.precio}</td>
+          <td><img src="../assets/backspace-fill.svg" alt="-1" onclick="borrar1Item(${producto.id})"></td>
+          <td><img src="../assets/backspace-reverse-fill.svg" alt="+1" onclick="sum1Item(${producto.id})"></td>
           <td><img src="../assets/trash.svg" alt="trash" onclick="borrarItem(${producto.id})"></td>
         </tr>
       </tbody>`;
@@ -62,9 +67,13 @@ renderBotonCarrito()
       <th scope="col">Total A Pagar:</th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <th>| $${totalAPagar()}</th>
     </tr>
     <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -122,7 +131,7 @@ renderBotonCarrito()
   function borrarItem(id) {
     let carro = JSON.parse(localStorage.getItem("carrito"));
     let carroNuevo = carro.filter((item) => {
-      return item.id !== id; // No es necesario JSON.parse(item)
+      return item.id !== id; 
     });
     guardarEnCarro(carroNuevo);
     renderCarro();
@@ -154,7 +163,7 @@ renderBotonCarrito()
     }
     renderBotonCarrito()
   
-    function totalAPagar() {
+    function totalAPagar(){
       const carrito = cargarCarroLS();
       const total = carrito.reduce((acumulador, item) => {
         const producto = item;
@@ -162,15 +171,63 @@ renderBotonCarrito()
       }, 0);
       return total;
     }
-    function borrarItem(id) {
-      let carro = JSON.parse(localStorage.getItem("carrito"));
-      let carroNuevo = carro.filter((item) => {
-        const producto = item; 
-        return producto.id !== id;
-      });
-      guardarEnCarro(carroNuevo);
-      renderCarro();
-      renderBotonCarrito();
-      location.reload()
-    }
+
+  function borrarItem(id){
+    let carro = JSON.parse(localStorage.getItem("carrito"));
+    let carroNuevo = carro.filter((item) =>{
+      const producto = item; 
+      return producto.id !== id;
+    });
+    guardarEnCarro(carroNuevo);
+    renderCarro();
+    renderBotonCarrito();
+   if(carro.length === 1){
+    location.reload();
+  }
+  }
 }
+
+function borrar1Item(id) {
+  let carro = JSON.parse(localStorage.getItem("carrito"));
+
+  for (i=0; i<carro.length; i++) {
+    if(carro[i].id === id){
+      if(carro[i].cantidad > 1){
+        carro[i].cantidad -= 1; 
+      } else {
+        carro.splice(i, 1);
+      }
+      break; 
+    }
+  }
+  guardarEnCarro(carro);
+  renderCarro();
+  renderBotonCarrito();
+  if(carro.length === 0){
+    location.reload();
+  }
+}
+
+function sum1Item(id) {
+  let carro = JSON.parse(localStorage.getItem("carrito"));
+
+  for (i=0; i<carro.length; i++) {
+    if(carro[i].id === id){
+      if(carro[i].cantidad > 0){
+        carro[i].cantidad += 1; 
+      } else {
+        carro.splice(i, 1);
+      }
+      break; 
+    }
+  }
+  guardarEnCarro(carro);
+  renderCarro();
+  renderBotonCarrito();
+  if(carro.length === 0){
+    location.reload();
+  }
+}
+
+
+

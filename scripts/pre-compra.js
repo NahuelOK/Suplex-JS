@@ -26,17 +26,17 @@ function preCompraRender() {
             <form action="compra">
                 <div class="seleccionar">
                     <label for="lista">Cantidad: </label>
-                    <select id="lista">
-                    <option value="opcion1">1 Unidad</option>
-                    <option value="opcion2">2 Unidades</option>
-                    <option value="opcion3">3 Unidades</option>
-                    <option value="opcion3">4 Unidades</option>
-                    <option value="opcion3">5 Unidades</option>
-                    <option value="opcion3">6 Unidades</option>
-                    <option value="opcion3">7 Unidades</option>
-                    <option value="opcion3">8 Unidades</option>
-                    <option value="opcion3">9 Unidades</option>
-                    <option value="opcion3">10 Unidades</option>
+                    <select id="cantidad-select">
+                    <option value="1">1 Unidad</option>
+                    <option value="2">2 Unidades</option>
+                    <option value="3">3 Unidades</option>
+                    <option value="4">4 Unidades</option>
+                    <option value="5">5 Unidades</option>
+                    <option value="6">6 Unidades</option>
+                    <option value="7">7 Unidades</option>
+                    <option value="8">8 Unidades</option>
+                    <option value="9">9 Unidades</option>
+                    <option value="10">10 Unidades</option>
                     </select>
                     <p>(200) Disponibles</p>
                 </div>
@@ -75,9 +75,13 @@ function preCompraRender() {
   function pushCarro(id) {
     const productoCargado = JSON.parse(localStorage.getItem("producto"));
     const carrito = cargarCarroLS();
+    const selectElement = document.getElementById("cantidad-select");
+    const cantidadSelect = selectElement.options[selectElement.selectedIndex].value;
+    const cantidad = parseInt(cantidadSelect);
+  
     if (estaAgregado(id)) {
       const pos = carrito.findIndex((item) => item.id === id);
-      carrito[pos].cantidad += 1;
+      carrito[pos].cantidad += cantidad;
       Toastify({
         text: "Producto agregado al carrito",
         class: "info",
@@ -88,7 +92,7 @@ function preCompraRender() {
         },
       }).showToast();
     } else {
-      productoCargado.cantidad = 1;
+      productoCargado.cantidad = cantidad;
       carrito.push(productoCargado);
       Toastify({
         text: "Producto agregado al carrito",
@@ -106,11 +110,15 @@ function preCompraRender() {
   function comprarYa(id) {
     const productoCargado = JSON.parse(localStorage.getItem("producto"));
     const carrito = cargarCarroLS();
+    const selectElement = document.getElementById("cantidad-select");
+    const cantidadSelect = selectElement.options[selectElement.selectedIndex].value;
+    const cantidad = parseInt(cantidadSelect);
+
     if (estaAgregado(id)) {
       const pos = carrito.findIndex((item) => item.id === id);
-      carrito[pos].cantidad += 1;
+      carrito[pos].cantidad += cantidad;
     } else {
-      productoCargado.cantidad = 1;
+      productoCargado.cantidad = cantidad;
       carrito.push(productoCargado);
     }
     guardarEnCarro(carrito);
