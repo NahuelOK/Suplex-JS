@@ -334,3 +334,10 @@ body main .todas-pregs {
     font-size: 30px; }
   body main .todas-pregs .p-pregs {
     font-size: 19px; }
+
+body .fin-medio {
+  display: flex;
+  justify-content: center;
+  margin-top: 18%;
+  font-size: 28px;
+  font-family: arial; }

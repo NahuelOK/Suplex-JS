@@ -1,0 +1,1 @@
+swal("Compra Realizada","!!Muchas Gracias!!","success")
