@@ -341,3 +341,43 @@ body .fin-medio {
   margin-top: 18%;
   font-size: 28px;
   font-family: arial; }
+
+body .mi-cuenta {
+  display: flex;
+  justify-content: center; }
+  body .mi-cuenta .login {
+    width: 40%;
+    margin-top: 5%;
+    margin-bottom: 6%; }
+    body .mi-cuenta .login .boton-login {
+      height: 36px;
+      width: 100%;
+      border-radius: 16px;
+      border-color: black;
+      background-color: black;
+      color: white;
+      font-size: 23px; }
+    body .mi-cuenta .login .form-control {
+      border: solid #272727 1px; }
+    body .mi-cuenta .login .form-check-input {
+      border: solid #272727 1px; }
+    body .mi-cuenta .login .form-text {
+      padding-left: 68%; }
+    body .mi-cuenta .login .form-textt {
+      margin-top: 8px; }
+
+body main .row {
+  padding: 140px;
+  padding-top: 80px; }
+
+body main .form-control {
+  border: solid #272727 1px; }
+
+body main .crear {
+  height: 38px;
+  width: 100%;
+  border-radius: 16px;
+  border-color: black;
+  background-color: black;
+  color: white;
+  font-size: 23px; }
