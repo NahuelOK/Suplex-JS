@@ -17,6 +17,14 @@ body header .navbar {
       gap: 42px;
       display: flex;
       align-items: center; }
+      body header .navbar .container-fluid .collapse .navbar-nav #nick-cuenta {
+        display: flex;
+        flex-direction: row-reverse; }
+        body header .navbar .container-fluid .collapse .navbar-nav #nick-cuenta img {
+          background-color: white;
+          height: 30px;
+          border-radius: 25px;
+          margin-top: 8%; }
       body header .navbar .container-fluid .collapse .navbar-nav .nav-link {
         color: white;
         font-size: 20px; }

@@ -1,6 +1,14 @@
 let botonLogin = document.getElementById("login");
-let usuarioLogeado;
+let mostrarUsuario = document.getElementById("nick-cuenta")
 
+function mostrarNick(){
+    let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
+    let nick = cuentaLogeada.usuario;
+    if(nick != "" || null){
+        mostrarUsuario.innerHTML = `<a class="nav-link" href="mi-cuenta.html">${nick}</a>
+    <img src="../assets/person-circle.svg" alt="user">`
+    }
+}
 function redireccion(){
     window.location = "../index.html"
 }
@@ -14,6 +22,14 @@ function traerCuentasLS(){
     let contraseñaIngresada = document.getElementById("contra-login").value 
     const CuentasEnLS = localStorage.getItem("cuentas-creadas")
     let CuentasEnLSJson= JSON.parse(CuentasEnLS)
+
+    if (CuentasEnLSJson === null){
+        swal({
+            title: "Cuenta No Encontrada",
+            text: "Registrese para tener una cuenta",
+            icon: "error",
+          });
+    }
 
     const cuentaEncontrada = CuentasEnLSJson.find(cuenta => {
         return cuenta.email === emailIngresado && cuenta.contraseña === contraseñaIngresada;
@@ -29,19 +45,18 @@ function traerCuentasLS(){
           });
         emailIngresado = document.getElementById("email-login").value=""
         contraseñaIngresada = document.getElementById("contra-login").value=""
+        localStorage.setItem("usuario-logeado", JSON.stringify(cuentaEncontrada));
         setTimeout(redireccion, 2800);
-        usuarioLogeado = true
-        console.log(usuarioLogeado)
-    }else {
+    }else{
         swal({
-            title: "Cuenta no Encontrada",
-            text: "Verifique los datos o Registrese para tener una cuenta",
+            title: "Datos mal cargados",
+            text: "Verifique los datos ingresados",
             icon: "error",
           });
-          usuarioLogeado = false
-          console.log(usuarioLogeado)
     }
 }
 
 botonLogin.addEventListener("click", traerCuentasLS)
 document.addEventListener("keydown", escucharEnter)
+
+mostrarNick()

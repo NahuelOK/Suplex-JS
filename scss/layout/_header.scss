@@ -15,6 +15,16 @@ body{
                         gap: 42px;
                         display: flex;
                         align-items: center;
+                        #nick-cuenta{
+                            display: flex;
+                            flex-direction: row-reverse;
+                            img{
+                                background-color: white;
+                                height: 30px;
+                                border-radius: 25px;
+                                margin-top: 8%;
+                            }
+                        }
                         .nav-link{
                             color: white; 
                             font-size: 20px;

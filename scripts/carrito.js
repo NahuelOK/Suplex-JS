@@ -78,7 +78,7 @@ renderBotonCarrito()
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td><a href="../pages/fin.html" target="_blank"><input type="button" value="Ir A Pagar" class="pagar" onclick="restablecerPagina(499)"></a></td>
+      <td><input type="button" value="Ir A Pagar" class="pagar" onclick="restablecerPagina(499)"></td>
     </tr>`;
   
     document.getElementById("tabla").innerHTML = contenido;
@@ -238,17 +238,25 @@ function sum1Item(id) {
 
 
 function restablecerPagina(id){
-  let carro = JSON.parse(localStorage.getItem("carrito"));
-  let carroNuevo = carro.filter((item) =>{
-    const producto = item; 
-    return producto.id === id;
-  });
-  guardarEnCarro(carroNuevo);
-  renderCarro();
-  renderBotonCarrito();
- if(carro.length === 1){
-  location.reload();
-  window.location = "../index.html"
+  let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
+  if(cuentaLogeada !== null){
+    let carro = JSON.parse(localStorage.getItem("carrito"));
+    let carroNuevo = carro.filter((item) =>{
+      const producto = item; 
+      return producto.id === id;
+    });
+    guardarEnCarro(carroNuevo);
+    renderCarro();
+    renderBotonCarrito();
+  if(carro.length === 1){
+    location.reload();
+    window.open("../pages/fin.html");
+    window.location = "../index.html"
+    }
+  }else{
+    window.location = "../pages/mi-cuenta.html"
   }
+
+  
 }
 

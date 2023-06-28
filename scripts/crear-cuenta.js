@@ -1,10 +1,6 @@
 let botonCrear = document.getElementById("boton-crear-cuenta")
 let CuentasGuardadas = [];
 
-function guardarEnLS(){
-    let CuentasGuarJson = JSON.stringify(CuentasGuardadas)
-    localStorage.setItem("cuentas-creadas", CuentasGuarJson)
-}
 function redireccion(){
     window.location = "../pages/mi-cuenta.html"
 }
@@ -58,6 +54,15 @@ function pushAlArray(){
         document.getElementById("crear-codigo-postal").value = "";
         document.getElementById("crear-numero-cel").value = "";
 
+        function guardarEnLS() {
+            let CuentasEnLS = localStorage.getItem("cuentas-creadas");
+            if (CuentasEnLS) {
+                CuentasGuardadas = JSON.parse(CuentasEnLS);
+            }
+            CuentasGuardadas.push(almacenador);
+            let CuentasGuarJson = JSON.stringify(CuentasGuardadas);
+            localStorage.setItem("cuentas-creadas", CuentasGuarJson);
+        }
         guardarEnLS()
         setTimeout(redireccion, 2800);
     }
