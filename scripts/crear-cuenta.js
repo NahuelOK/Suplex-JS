@@ -13,7 +13,6 @@ function pushAlArray(){
     let postal = document.getElementById("crear-codigo-postal").value
     let cel = document.getElementById("crear-numero-cel").value
     let pais = document.getElementById("crear-pais").value
-    let descripcionUsuario = document.getElementById("crear-descripcion").value
 
     let almacenador = {
         email:email,
@@ -24,7 +23,6 @@ function pushAlArray(){
         postal:postal,
         cel:cel,
         pais:pais,
-        infoUsuario:descripcionUsuario
     };
     let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -249,8 +249,15 @@ function sum1Item(id) {
     location.reload();
   }
 }
+let valorDefault = localStorage.getItem("compras-en-esta-sesion")
+  ? parseInt(localStorage.getItem("compras-en-esta-sesion"))
+  : 0;
 
-
+function sumarCompra() {
+  let acumular = valorDefault + 1;
+  valorDefault = acumular;
+  localStorage.setItem("compras-en-esta-sesion", acumular);
+}
 function restablecerPagina(id){
   let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
   if(cuentaLogeada !== null){
@@ -262,6 +269,7 @@ function restablecerPagina(id){
     guardarEnCarro(carroNuevo);
     renderCarro();
     renderBotonCarrito();
+    sumarCompra()
   if(carro.length === 1){
     location.reload();
     window.open("../pages/fin.html");
@@ -270,7 +278,5 @@ function restablecerPagina(id){
   }else{
     window.location = "../pages/mi-cuenta.html"
   }
-
-  
 }
 

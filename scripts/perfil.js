@@ -3,6 +3,10 @@ window.onload = function() {
 };
 let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
 let perfilCarga = document.getElementById("todo-perfil")
+let comprasEnEstaSesion = JSON.parse(localStorage.getItem("compras-en-esta-sesion")); 
+if(comprasEnEstaSesion === null){
+  comprasEnEstaSesion = 0
+}
 
 function mostrarPagPerfil(){
     if (cuentaLogeada === null) {
@@ -30,7 +34,7 @@ function mostrarPagPerfil(){
             <div class="card-body">
                 <h5 class="card-title">${cuentaLogeada.usuario}</h5>
                 <p class="card-text">${cuentaLogeada.pais}</p>
-                <p class="card-text"><small class="text-body-secondary">${cuentaLogeada.infoUsuario}</small></p>
+                <p class="card-text"><small class="text-body-secondary">Compras realizadas en esta sesión: ${comprasEnEstaSesion}</small></p>
             </div>
             </div>
         </div>
@@ -69,6 +73,7 @@ function cerrarSesion(){
     div.innerHTML = cargar
     contBoton.appendChild(div);
     localStorage.removeItem("usuario-logeado")
+    localStorage.removeItem("compras-en-esta-sesion")
 
     setTimeout(() => {
         window.location = "../pages/mi-cuenta.html"
