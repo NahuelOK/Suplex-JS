@@ -12,6 +12,8 @@ function pushAlArray(){
     let direccion = document.getElementById("crear-direccion").value
     let postal = document.getElementById("crear-codigo-postal").value
     let cel = document.getElementById("crear-numero-cel").value
+    let pais = document.getElementById("crear-pais").value
+    let descripcionUsuario = document.getElementById("crear-descripcion").value
 
     let almacenador = {
         email:email,
@@ -20,7 +22,9 @@ function pushAlArray(){
         validarContraseña:validarContraseña,
         direccion:direccion,
         postal:postal,
-        cel:cel
+        cel:cel,
+        pais:pais,
+        infoUsuario:descripcionUsuario
     };
     let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -53,6 +57,8 @@ function pushAlArray(){
         document.getElementById("crear-direccion").value = "";
         document.getElementById("crear-codigo-postal").value = "";
         document.getElementById("crear-numero-cel").value = "";
+        pais = document.getElementById("crear-pais").value = "";
+        descripcionUsuario = document.getElementById("crear-descripcion").value = "";
 
         function guardarEnLS() {
             let CuentasEnLS = localStorage.getItem("cuentas-creadas");
