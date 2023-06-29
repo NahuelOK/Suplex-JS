@@ -49,7 +49,7 @@ function traerCuentasLS(){
         setTimeout(redireccion, 2800);
     }else{
         swal({
-            title: "Datos mal cargados",
+            title: "Error",
             text: "Verifique los datos ingresados",
             icon: "error",
           });
