@@ -56,7 +56,6 @@ function pushAlArray(){
         document.getElementById("crear-codigo-postal").value = "";
         document.getElementById("crear-numero-cel").value = "";
         pais = document.getElementById("crear-pais").value = "";
-        descripcionUsuario = document.getElementById("crear-descripcion").value = "";
 
         function guardarEnLS() {
             let CuentasEnLS = localStorage.getItem("cuentas-creadas");
