@@ -1,5 +1,7 @@
 body{
-    main{
+    #main-preCompra{
+        margin-top: 2%;
+        margin-bottom: 8%;
         .pre-compra{
             display: grid;
             grid-template-columns: 70%, 30%;
@@ -33,11 +35,11 @@ body{
             .pre-der{
                 grid-column: 2/2;
                 margin-right: 68px;
-                margin-top: 12%;
+                margin-top: 18%;
                 border: solid #141414 1px;
                 border-radius: 10px;
                 padding: 40px;
-                height: 72%;
+                height: 654px;
                 box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
                 .limite{
                     width: 300px;
@@ -135,7 +137,7 @@ body{
             .abajo-d{
                 display: flex;
                 flex-direction: column;
-                margin-top: 60%;
+                margin-top: 60px;
                 h2{
                     font-size: 24px;
                     color: black;

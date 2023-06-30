@@ -1,31 +1,35 @@
 body{
-    .mi-cuenta{
-        display: flex;
-        justify-content: center;
-        .login{
-            width: 40%;
-            margin-top: 5%;
-            margin-bottom: 6%;
-            .boton-login{
-                height: 36px;
-                width: 100%;
-                border-radius: 16px;
-                border-color: black;
-                background-color: black;
-                color: white;
-                font-size: 23px;
-            }
-            .form-control{
-                border: solid rgb(39, 39, 39) 1px;
-            }
-            .form-check-input{
-                border: solid rgb(39, 39, 39) 1px;
-            }
-            .form-text{
-                padding-left: 68%;
-            }
-            .form-textt{
-                margin-top: 8px;
+    .mi-sesion{
+        margin-top: 5%;
+        margin-bottom: 4%;
+        .mi-cuenta{
+            display: flex;
+            justify-content: center;
+            .login{
+                width: 40%;
+                margin-top: 5%;
+                margin-bottom: 6%;
+                .boton-login{
+                    height: 36px;
+                    width: 100%;
+                    border-radius: 16px;
+                    border-color: black;
+                    background-color: black;
+                    color: white;
+                    font-size: 23px;
+                }
+                .form-control{
+                    border: solid rgb(39, 39, 39) 1px;
+                }
+                .form-check-input{
+                    border: solid rgb(39, 39, 39) 1px;
+                }
+                .form-text{
+                    padding-left: 68%;
+                }
+                .form-textt{
+                    margin-top: 8px;
+                }
             }
         }
     }

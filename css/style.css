@@ -14,7 +14,7 @@ body header .navbar {
     body header .navbar .container-fluid .navbar-brand img {
       height: 40px; }
     body header .navbar .container-fluid .collapse .navbar-nav {
-      gap: 42px;
+      gap: 38px;
       display: flex;
       align-items: center; }
       body header .navbar .container-fluid .collapse .navbar-nav #nick-cuenta {
@@ -140,6 +140,11 @@ body main .cont-tira {
         background-color: black;
         color: white;
         font-size: 23px; }
+      body main .cont-tira .tira1 .producto .parte-baja div .boton-ver:hover {
+        border-radius: 20px;
+        border-color: black;
+        background-color: white;
+        color: black; }
   body main .cont-tira .tira2 {
     display: flex;
     gap: 20px;
@@ -166,128 +171,131 @@ body main .banner-medio {
   body main .banner-medio img {
     width: 100%; }
 
-body main .pre-compra {
-  display: grid;
-  grid-template-columns: 70%, 30%; }
-  body main .pre-compra .pre-izq {
-    grid-column: 1/1;
-    margin-left: 4%;
-    margin-top: 5%; }
-    body main .pre-compra .pre-izq h1 {
-      color: black;
-      font-size: 30px; }
-    body main .pre-compra .pre-izq h2 {
-      color: black;
-      margin-bottom: 16px;
-      font-size: 26px; }
-    body main .pre-compra .pre-izq .contenedor-info {
+body #main-preCompra {
+  margin-top: 2%;
+  margin-bottom: 8%; }
+  body #main-preCompra .pre-compra {
+    display: grid;
+    grid-template-columns: 70%, 30%; }
+    body #main-preCompra .pre-compra .pre-izq {
+      grid-column: 1/1;
+      margin-left: 4%;
+      margin-top: 5%; }
+      body #main-preCompra .pre-compra .pre-izq h1 {
+        color: black;
+        font-size: 30px; }
+      body #main-preCompra .pre-compra .pre-izq h2 {
+        color: black;
+        margin-bottom: 16px;
+        font-size: 26px; }
+      body #main-preCompra .pre-compra .pre-izq .contenedor-info {
+        border: solid #141414 1px;
+        width: 80%;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
+      body #main-preCompra .pre-compra .pre-izq .imagen-pre {
+        margin-bottom: 28px; }
+        body #main-preCompra .pre-compra .pre-izq .imagen-pre img {
+          width: 80%; }
+    body #main-preCompra .pre-compra .pre-der {
+      grid-column: 2/2;
+      margin-right: 68px;
+      margin-top: 18%;
       border: solid #141414 1px;
-      width: 80%;
-      padding: 10px;
       border-radius: 10px;
+      padding: 40px;
+      height: 654px;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
-    body main .pre-compra .pre-izq .imagen-pre {
-      margin-bottom: 28px; }
-      body main .pre-compra .pre-izq .imagen-pre img {
-        width: 80%; }
-  body main .pre-compra .pre-der {
-    grid-column: 2/2;
-    margin-right: 68px;
-    margin-top: 12%;
-    border: solid #141414 1px;
-    border-radius: 10px;
-    padding: 40px;
-    height: 72%;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
-    body main .pre-compra .pre-der .limite {
-      width: 300px; }
-    body main .pre-compra .pre-der .titulito {
-      font-size: 39px;
-      color: black; }
-    body main .pre-compra .pre-der p {
-      margin: 3px;
-      font-size: 20px; }
-    body main .pre-compra .pre-der a {
-      margin-top: 20px;
-      font-size: 19px; }
-    body main .pre-compra .pre-der .devolucion {
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px;
-      margin-bottom: 70px; }
-      body main .pre-compra .pre-der .devolucion div {
+      body #main-preCompra .pre-compra .pre-der .limite {
+        width: 300px; }
+      body #main-preCompra .pre-compra .pre-der .titulito {
+        font-size: 39px;
+        color: black; }
+      body #main-preCompra .pre-compra .pre-der p {
+        margin: 3px;
+        font-size: 20px; }
+      body #main-preCompra .pre-compra .pre-der a {
+        margin-top: 20px;
+        font-size: 19px; }
+      body #main-preCompra .pre-compra .pre-der .devolucion {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 70px; }
+        body #main-preCompra .pre-compra .pre-der .devolucion div {
+          display: flex;
+          align-items: center;
+          gap: 10px; }
+          body #main-preCompra .pre-compra .pre-der .devolucion div h3 {
+            font-size: 20px;
+            color: #29ef09; }
+          body #main-preCompra .pre-compra .pre-der .devolucion div img {
+            height: 28px;
+            margin-bottom: 7px; }
+      body #main-preCompra .pre-compra .pre-der h4 {
+        font-size: 16px;
+        margin-bottom: 20px; }
+      body #main-preCompra .pre-compra .pre-der form .seleccionar {
+        border: solid #141414 1px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
-        gap: 10px; }
-        body main .pre-compra .pre-der .devolucion div h3 {
-          font-size: 20px;
-          color: #29ef09; }
-        body main .pre-compra .pre-der .devolucion div img {
-          height: 28px;
-          margin-bottom: 7px; }
-    body main .pre-compra .pre-der h4 {
-      font-size: 16px;
-      margin-bottom: 20px; }
-    body main .pre-compra .pre-der form .seleccionar {
-      border: solid #141414 1px;
-      border-radius: 12px;
+        height: 50px;
+        padding: 15px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
+        body #main-preCompra .pre-compra .pre-der form .seleccionar select {
+          border: none;
+          font-size: 16px;
+          width: 35%; }
+        body #main-preCompra .pre-compra .pre-der form .seleccionar select:hover {
+          border: none; }
+        body #main-preCompra .pre-compra .pre-der form .seleccionar p {
+          font-size: 13px; }
+      body #main-preCompra .pre-compra .pre-der .boton-enviar-carro {
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 30px; }
+        body #main-preCompra .pre-compra .pre-der .boton-enviar-carro input {
+          width: 100%;
+          height: 40px;
+          background-color: white;
+          border-radius: 12px;
+          color: black;
+          font-weight: bold;
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
+      body #main-preCompra .pre-compra .pre-der .boton-comprar-ahora {
+        display: flex;
+        justify-content: center;
+        margin: 15px; }
+      body #main-preCompra .pre-compra .pre-der .comprar-ya {
+        width: 100%; }
+        body #main-preCompra .pre-compra .pre-der .comprar-ya input {
+          width: 100%;
+          height: 40px;
+          background-color: black;
+          border-radius: 12px;
+          font-weight: bold;
+          color: white;
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
+    body #main-preCompra .pre-compra .abajo-d {
       display: flex;
-      align-items: center;
-      height: 50px;
-      padding: 15px;
-      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
-      body main .pre-compra .pre-der form .seleccionar select {
-        border: none;
-        font-size: 16px;
-        width: 35%; }
-      body main .pre-compra .pre-der form .seleccionar select:hover {
-        border: none; }
-      body main .pre-compra .pre-der form .seleccionar p {
-        font-size: 13px; }
-    body main .pre-compra .pre-der .boton-enviar-carro {
-      display: flex;
-      justify-content: center;
-      margin: 15px;
-      margin-top: 30px; }
-      body main .pre-compra .pre-der .boton-enviar-carro input {
-        width: 100%;
-        height: 40px;
-        background-color: white;
-        border-radius: 12px;
+      flex-direction: column;
+      margin-top: 60px; }
+      body #main-preCompra .pre-compra .abajo-d h2 {
+        font-size: 24px;
         color: black;
-        font-weight: bold;
-        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
-    body main .pre-compra .pre-der .boton-comprar-ahora {
-      display: flex;
-      justify-content: center;
-      margin: 15px; }
-    body main .pre-compra .pre-der .comprar-ya {
-      width: 100%; }
-      body main .pre-compra .pre-der .comprar-ya input {
-        width: 100%;
-        height: 40px;
-        background-color: black;
-        border-radius: 12px;
-        font-weight: bold;
-        color: white;
-        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
-  body main .pre-compra .abajo-d {
-    display: flex;
-    flex-direction: column;
-    margin-top: 60%; }
-    body main .pre-compra .abajo-d h2 {
-      font-size: 24px;
-      color: black;
-      margin: 0%; }
-    body main .pre-compra .abajo-d a {
-      margin-top: 10px;
-      font-size: 19px; }
+        margin: 0%; }
+      body #main-preCompra .pre-compra .abajo-d a {
+        margin-top: 10px;
+        font-size: 19px; }
 
 body main .img-carrito-muestra {
   width: 32px; }
 
 body main .carro-vacio {
-  margin-top: 12%;
+  margin-top: 6%;
   margin-left: 2%;
   margin-bottom: 4%; }
   body main .carro-vacio .carro-vacio-h1 {
@@ -350,29 +358,32 @@ body .fin-medio {
   font-size: 28px;
   font-family: arial; }
 
-body .mi-cuenta {
-  display: flex;
-  justify-content: center; }
-  body .mi-cuenta .login {
-    width: 40%;
-    margin-top: 5%;
-    margin-bottom: 6%; }
-    body .mi-cuenta .login .boton-login {
-      height: 36px;
-      width: 100%;
-      border-radius: 16px;
-      border-color: black;
-      background-color: black;
-      color: white;
-      font-size: 23px; }
-    body .mi-cuenta .login .form-control {
-      border: solid #272727 1px; }
-    body .mi-cuenta .login .form-check-input {
-      border: solid #272727 1px; }
-    body .mi-cuenta .login .form-text {
-      padding-left: 68%; }
-    body .mi-cuenta .login .form-textt {
-      margin-top: 8px; }
+body .mi-sesion {
+  margin-top: 5%;
+  margin-bottom: 4%; }
+  body .mi-sesion .mi-cuenta {
+    display: flex;
+    justify-content: center; }
+    body .mi-sesion .mi-cuenta .login {
+      width: 40%;
+      margin-top: 5%;
+      margin-bottom: 6%; }
+      body .mi-sesion .mi-cuenta .login .boton-login {
+        height: 36px;
+        width: 100%;
+        border-radius: 16px;
+        border-color: black;
+        background-color: black;
+        color: white;
+        font-size: 23px; }
+      body .mi-sesion .mi-cuenta .login .form-control {
+        border: solid #272727 1px; }
+      body .mi-sesion .mi-cuenta .login .form-check-input {
+        border: solid #272727 1px; }
+      body .mi-sesion .mi-cuenta .login .form-text {
+        padding-left: 68%; }
+      body .mi-sesion .mi-cuenta .login .form-textt {
+        margin-top: 8px; }
 
 body main .row {
   padding: 140px;
@@ -388,8 +399,7 @@ body main .crear {
   border-color: black;
   background-color: black;
   color: white;
-  font-size: 23px;
-  margin-top: 20px; }
+  font-size: 23px; }
 
 body main {
   margin-top: 5%;
