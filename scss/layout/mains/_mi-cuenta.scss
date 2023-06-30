@@ -13,9 +13,9 @@ body{
                     height: 36px;
                     width: 100%;
                     border-radius: 16px;
-                    border-color: black;
-                    background-color: black;
-                    color: white;
+                    border-color: $color-principal-a;
+                    background-color: $color-principal-a;
+                    color: $color-principal-b;
                     font-size: 23px;
                 }
                 .form-control{

@@ -1,15 +1,14 @@
 body{
     footer{
-        background-color:black;
+        background-color:$color-principal-a;
         margin-top: 50px;
         .redes{
-            color: white;
+            color: $color-principal-b;
             font-size: 20px;
             margin-left: 10px;
         }
         .ig{
-          width: 50px;
-          height: 50px;
+        @include alto-ancho(50px, 50px);
           margin-left: 5px;
         }
         .ig:hover{
@@ -24,7 +23,7 @@ body{
             border: solid rgba(0, 0, 0, 0) 2px;
         }
         .contactanos{
-            color: white;
+            color: $color-principal-b;
             font-size: 26px;
             display: flex;
             justify-content: center;
@@ -35,7 +34,7 @@ body{
             display: flex;
             justify-content: center;
             h3{
-                color: white;
+                color: $color-principal-b;
                 font-size: 20px;  
                 margin-bottom: 18px;
             }
@@ -43,7 +42,7 @@ body{
         .mail{
             display: flex;
             justify-content: center;
-            color: white;
+            color: $color-principal-b;
             margin-bottom: 80px;
             h3{
                 font-size: 20px;
@@ -52,7 +51,7 @@ body{
         .medios-d-p{
             display: flex;
             align-items: center;
-            color: white;
+            color: $color-principal-b;
             font-size: 20px;
             margin-bottom: 40px;
             h3{
@@ -66,7 +65,7 @@ body{
         }
         .creador{
             margin: 0px;
-            color: white;
+            color: $color-principal-b;
             font-size: 12px;
             display: flex;
             justify-content: center;

@@ -23,30 +23,28 @@ body{
                 font-family: sans-serif;
             }
             .boton-carro-vacio{
-                height: 68px;
-                width: 20%;
-                background-color: black;
-                color: white;
+                @include alto-ancho(68px, 20%);
+                background-color: $color-principal-a;
+                color: $color-principal-b;
                 font-size: 24px;
                 padding: 4px;
                 border-radius: 16px;
                 margin-bottom: 24px;
             }
             .boton-carro-vacio:hover{
-                color: black;
-                background-color: white;
+                color: $color-principal-a;
+                background-color: $color-principal-b;
             }
             .tarjetas{
                 width: 48%;
             }
         }
         .pagar{
-            height: 32px;
-            width: 128px;
+            @include alto-ancho(32px, 128px);
             border-radius: 20px;
-            border-color: black;
-            background-color: black;
-            color: white;
+            border-color: $color-principal-a;
+            background-color: $color-principal-a;
+            color: $color-principal-b;
             font-size: 19px;
         }
     }

@@ -8,12 +8,11 @@ body{
             border: solid rgb(39, 39, 39) 1px;
         }
         .crear{
-            height: 38px;
-            width: 100%;
+            @include alto-ancho(38px, 100%);
             border-radius: 16px;
-            border-color: black;
-            background-color: black;
-            color: white;
+            border-color: $color-principal-a;
+            background-color: $color-principal-a;
+            color: $color-principal-b;
             font-size: 23px;
         }
     }

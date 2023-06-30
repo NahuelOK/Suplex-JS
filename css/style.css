@@ -7,7 +7,7 @@ a {
   text-decoration: none; }
 
 body header .navbar {
-  background-color: black;
+  background-color: #000000;
   height: 56px; }
   body header .navbar .container-fluid {
     gap: 43%; }
@@ -21,39 +21,40 @@ body header .navbar {
         display: flex;
         flex-direction: row-reverse; }
         body header .navbar .container-fluid .collapse .navbar-nav #nick-cuenta img {
-          background-color: white;
+          background-color: #ffffff;
           height: 30px;
           border-radius: 25px;
           margin-top: 8%; }
       body header .navbar .container-fluid .collapse .navbar-nav .nav-link {
-        color: white;
+        color: #ffffff;
         font-size: 20px; }
         body header .navbar .container-fluid .collapse .navbar-nav .nav-link .btn {
           margin-top: 4px; }
           body header .navbar .container-fluid .collapse .navbar-nav .nav-link .btn .carrito {
             height: 28px; }
       body header .navbar .container-fluid .collapse .navbar-nav .dropdown-menu {
-        background-color: black; }
+        background-color: #000000; }
         body header .navbar .container-fluid .collapse .navbar-nav .dropdown-menu .dropdown-divider {
-          border-color: white; }
+          background-color: #ffffff; }
         body header .navbar .container-fluid .collapse .navbar-nav .dropdown-menu .dropdown-item {
-          color: white; }
+          color: #ffffff; }
         body header .navbar .container-fluid .collapse .navbar-nav .dropdown-menu .dropdown-item:hover {
-          color: black; }
+          background-color: #ffffff;
+          color: #000000; }
 
 body header .banner img {
   width: 100%; }
 
 body footer {
-  background-color: black;
+  background-color: #000000;
   margin-top: 50px; }
   body footer .redes {
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     margin-left: 10px; }
   body footer .ig {
-    width: 50px;
     height: 50px;
+    width: 50px;
     margin-left: 5px; }
   body footer .ig:hover {
     border: solid rgba(0, 0, 0, 0) 2px; }
@@ -64,7 +65,7 @@ body footer {
   body footer .whats:hover {
     border: solid rgba(0, 0, 0, 0) 2px; }
   body footer .contactanos {
-    color: white;
+    color: #ffffff;
     font-size: 26px;
     display: flex;
     justify-content: center;
@@ -74,20 +75,20 @@ body footer {
     display: flex;
     justify-content: center; }
     body footer .adress h3 {
-      color: white;
+      color: #ffffff;
       font-size: 20px;
       margin-bottom: 18px; }
   body footer .mail {
     display: flex;
     justify-content: center;
-    color: white;
+    color: #ffffff;
     margin-bottom: 80px; }
     body footer .mail h3 {
       font-size: 20px; }
   body footer .medios-d-p {
     display: flex;
     align-items: center;
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     margin-bottom: 40px; }
     body footer .medios-d-p h3 {
@@ -98,21 +99,21 @@ body footer {
       width: 634px; }
   body footer .creador {
     margin: 0px;
-    color: white;
+    color: #ffffff;
     font-size: 12px;
     display: flex;
     justify-content: center; }
 
 body main .lengueta {
-  background-color: black;
+  height: 34px;
   width: 24%;
+  background-color: #000000;
   margin-top: 2%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 34px;
   margin-bottom: 40px; }
   body main .lengueta h2 {
-    color: white;
+    color: #ffffff;
     font-size: 26px;
     margin-left: 38px; }
 
@@ -136,15 +137,15 @@ body main .cont-tira {
         height: 38px;
         width: 126px;
         border-radius: 20px;
-        border-color: black;
-        background-color: black;
-        color: white;
+        border-color: #000000;
+        background-color: #000000;
+        color: #ffffff;
         font-size: 23px; }
       body main .cont-tira .tira1 .producto .parte-baja div .boton-ver:hover {
         border-radius: 20px;
-        border-color: black;
-        background-color: white;
-        color: black; }
+        border-color: #000000;
+        background-color: #ffffff;
+        color: #000000; }
   body main .cont-tira .tira2 {
     display: flex;
     gap: 20px;
@@ -161,9 +162,9 @@ body main .cont-tira {
         height: 38px;
         width: 126px;
         border-radius: 20px;
-        border-color: black;
-        background-color: black;
-        color: white;
+        border-color: #000000;
+        background-color: #000000;
+        color: #ffffff;
         font-size: 23px; }
 
 body main .banner-medio {
@@ -182,10 +183,10 @@ body #main-preCompra {
       margin-left: 4%;
       margin-top: 5%; }
       body #main-preCompra .pre-compra .pre-izq h1 {
-        color: black;
+        color: #000000;
         font-size: 30px; }
       body #main-preCompra .pre-compra .pre-izq h2 {
-        color: black;
+        color: #000000;
         margin-bottom: 16px;
         font-size: 26px; }
       body #main-preCompra .pre-compra .pre-izq .contenedor-info {
@@ -205,13 +206,13 @@ body #main-preCompra {
       border: solid #141414 1px;
       border-radius: 10px;
       padding: 40px;
-      height: 654px;
+      height: 668px;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
       body #main-preCompra .pre-compra .pre-der .limite {
         width: 300px; }
       body #main-preCompra .pre-compra .pre-der .titulito {
         font-size: 39px;
-        color: black; }
+        color: #000000; }
       body #main-preCompra .pre-compra .pre-der p {
         margin: 3px;
         font-size: 20px; }
@@ -258,11 +259,11 @@ body #main-preCompra {
         margin: 15px;
         margin-top: 30px; }
         body #main-preCompra .pre-compra .pre-der .boton-enviar-carro input {
-          width: 100%;
           height: 40px;
-          background-color: white;
+          width: 100%;
+          background-color: #ffffff;
           border-radius: 12px;
-          color: black;
+          color: #000000;
           font-weight: bold;
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
       body #main-preCompra .pre-compra .pre-der .boton-comprar-ahora {
@@ -272,12 +273,12 @@ body #main-preCompra {
       body #main-preCompra .pre-compra .pre-der .comprar-ya {
         width: 100%; }
         body #main-preCompra .pre-compra .pre-der .comprar-ya input {
-          width: 100%;
           height: 40px;
-          background-color: black;
+          width: 100%;
+          background-color: #000000;
           border-radius: 12px;
           font-weight: bold;
-          color: white;
+          color: #ffffff;
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3); }
     body #main-preCompra .pre-compra .abajo-d {
       display: flex;
@@ -285,7 +286,7 @@ body #main-preCompra {
       margin-top: 60px; }
       body #main-preCompra .pre-compra .abajo-d h2 {
         font-size: 24px;
-        color: black;
+        color: #000000;
         margin: 0%; }
       body #main-preCompra .pre-compra .abajo-d a {
         margin-top: 10px;
@@ -313,15 +314,15 @@ body main .carro-vacio {
   body main .carro-vacio .boton-carro-vacio {
     height: 68px;
     width: 20%;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     font-size: 24px;
     padding: 4px;
     border-radius: 16px;
     margin-bottom: 24px; }
   body main .carro-vacio .boton-carro-vacio:hover {
-    color: black;
-    background-color: white; }
+    color: #000000;
+    background-color: #ffffff; }
   body main .carro-vacio .tarjetas {
     width: 48%; }
 
@@ -329,9 +330,9 @@ body main .pagar {
   height: 32px;
   width: 128px;
   border-radius: 20px;
-  border-color: black;
-  background-color: black;
-  color: white;
+  border-color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   font-size: 19px; }
 
 body main .h1-pregs {
@@ -372,9 +373,9 @@ body .mi-sesion {
         height: 36px;
         width: 100%;
         border-radius: 16px;
-        border-color: black;
-        background-color: black;
-        color: white;
+        border-color: #000000;
+        background-color: #000000;
+        color: #ffffff;
         font-size: 23px; }
       body .mi-sesion .mi-cuenta .login .form-control {
         border: solid #272727 1px; }
@@ -396,9 +397,9 @@ body main .crear {
   height: 38px;
   width: 100%;
   border-radius: 16px;
-  border-color: black;
-  background-color: black;
-  color: white;
+  border-color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   font-size: 23px; }
 
 body main {
@@ -408,8 +409,8 @@ body main {
     display: flex;
     gap: 15%; }
     body main .perfil-completo .card-header {
-      background-color: black;
-      color: white; }
+      background-color: #000000;
+      color: #ffffff; }
     body main .perfil-completo .card-img {
       max-width: 540px;
       margin-top: 3%;

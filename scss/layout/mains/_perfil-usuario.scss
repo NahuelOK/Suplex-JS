@@ -6,8 +6,8 @@ body{
             display: flex;
             gap: 15%;
             .card-header{
-                background-color: black;
-                color: white;
+                background-color: $color-principal-a;
+                color: $color-principal-b;
             }
             .card-img{
                 max-width: 540px;

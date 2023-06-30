@@ -1,15 +1,14 @@
 body{
     main{
         .lengueta{
-            background-color: black;
-            width: 24%;
+            @include alto-ancho(34px, 24%);
+            background-color: $color-principal-a;
             margin-top: 2%;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            height: 34px;
             margin-bottom: 40px;
             h2{
-                color: white;
+                color: $color-principal-b;
                 font-size: 26px;
                 margin-left: 38px;
             }
@@ -38,19 +37,18 @@ body{
                         justify-content: end;
                         margin-right: 10px;
                         .boton-ver{
-                            height: 38px;
-                            width: 126px;
+                            @include alto-ancho(38px, 126px);
                             border-radius: 20px;
-                            border-color: black;
-                            background-color: black;
-                            color: white;
+                            border-color: $color-principal-a;
+                            background-color: $color-principal-a;
+                            color: $color-principal-b;
                             font-size: 23px;
                         }
                         .boton-ver:hover{
                             border-radius: 20px;
-                            border-color: rgb(0, 0, 0);
-                            background-color: rgb(255, 255, 255);
-                            color: rgb(0, 0, 0);
+                            border-color: $color-principal-a;
+                            background-color: $color-principal-b;
+                            color: $color-principal-a;
                         }
                        }
                     }
@@ -73,12 +71,11 @@ body{
                         justify-content: end;
                         margin-right: 10px;
                         .boton-ver{
-                            height: 38px;
-                            width: 126px;
+                            @include alto-ancho(38px, 126px);
                             border-radius: 20px;
-                            border-color: black;
-                            background-color: black;
-                            color: white;
+                            border-color: $color-principal-a;
+                            background-color: $color-principal-a;
+                            color: $color-principal-b;
                             font-size: 23px;
                         }
                        }
@@ -90,7 +87,6 @@ body{
             margin-top: 7%;
             img{
                 width: 100%;
-               
             }
         }
     }

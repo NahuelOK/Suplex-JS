@@ -1,7 +1,7 @@
 body{
     header{
         .navbar{
-            background-color: black;
+            background-color: $color-principal-a;
             height: 56px;
             .container-fluid{
                 gap: 43%;
@@ -19,14 +19,14 @@ body{
                             display: flex;
                             flex-direction: row-reverse;
                             img{
-                                background-color: white;
+                                background-color: $color-principal-b;
                                 height: 30px;
                                 border-radius: 25px;
                                 margin-top: 8%;
                             }
                         }
                         .nav-link{
-                            color: white; 
+                            color: $color-principal-b;
                             font-size: 20px;
                             .btn{
                                 margin-top: 4px;
@@ -36,15 +36,16 @@ body{
                             }
                         }
                         .dropdown-menu{
-                            background-color: black;
+                            background-color: $color-principal-a;
                             .dropdown-divider{
-                                border-color: white;
+                                background-color: $color-principal-b;
                             }
                             .dropdown-item{
-                                color: white;
+                                color: $color-principal-b;
                             }
                             .dropdown-item:hover{
-                                color: black;
+                                background-color: $color-principal-b;
+                                color: $color-principal-a;
                             }
                         }
                     }
