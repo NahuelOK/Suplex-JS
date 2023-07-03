@@ -40,7 +40,6 @@ const productos = [
     {id: 39, nombre: "Shaker Blanco Transparente ON", precio: 1200, cuotas:(1200/12).toFixed(2), img: "assets/produ39.png",imgXXL:"assets/produ39-xxl.png",info: info39, categoria: "S", masVendido: false, masNuevo: false},
     {id: 40, nombre: "Shaker Negro Transparente GOLD", precio: 2400, cuotas:(2400/12).toFixed(2), img: "assets/produ40.png",imgXXL:"assets/produ40-xxl.png",info: info40, categoria: "S", masVendido: true, masNuevo: false},
 ]
-
 function guardarEnLS(){
     localStorage.setItem("productos", JSON.stringify(productos))
 }
@@ -48,7 +47,6 @@ function cargarProdcutosLS(){
    return JSON.parse(localStorage.getItem("productos")) 
 }
 guardarEnLS()
-
 function preCompra(id){
     let productos = cargarProdcutosLS();
     let producto = productos.find(item=>item.id == id)

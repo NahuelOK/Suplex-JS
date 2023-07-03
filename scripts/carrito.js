@@ -207,10 +207,8 @@ renderBotonCarrito()
   }
   }
 }
-
 function borrar1Item(id) {
   let carro = JSON.parse(localStorage.getItem("carrito"));
-
   for (i=0; i<carro.length; i++) {
     if(carro[i].id === id){
       if(carro[i].cantidad > 1){
@@ -252,7 +250,6 @@ function sum1Item(id) {
 let valorDefault = localStorage.getItem("compras-en-esta-sesion")
   ? parseInt(localStorage.getItem("compras-en-esta-sesion"))
   : 0;
-
 function sumarCompra() {
   let acumular = valorDefault + 1;
   valorDefault = acumular;

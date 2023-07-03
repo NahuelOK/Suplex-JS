@@ -24,8 +24,9 @@ function pushAlArray(){
         cel:cel,
         pais:pais,
     };
-    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     if((email == "")||(usuario == "")||(contraseña == "")||(validarContraseña == "")||(direccion == "")||(postal == "")||(cel == "")){
         swal("Error al crear cuenta","Revise que los datos ingresados sean validos","error")
     }else if (!regexEmail.test(email)) {
@@ -38,6 +39,8 @@ function pushAlArray(){
         swal("Error la contraseña es demaciado corta","Revise que la contraseña tenga minimo 8 carácteres","error")
         document.getElementById("crear-contraseña").value = "";
         document.getElementById("validar-contraseña").value = "";
+    }else if(usuario.length > 8){
+        swal("Error el nombre de usuario es de maximo 8 carácteres","Revise que el nombre de usuario tenga maximo 8 carácteres","error")
     }else{
         CuentasGuardadas.push(almacenador)
         swal({
