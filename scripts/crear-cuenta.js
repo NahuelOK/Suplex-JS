@@ -1,6 +1,21 @@
 let botonCrear = document.getElementById("boton-crear-cuenta")
 let CuentasGuardadas = [];
+let cuentasCreadas = JSON.parse(localStorage.getItem("cuentas-creadas"));
 
+function noDuplicarUsuarios() {
+    let usuario = document.getElementById("crear-usuario").value;
+    let coincidencia = cuentasCreadas.some((element) => element.usuario === usuario);
+    console.log(usuario + " user");
+    console.log(coincidencia + " coin");
+    return coincidencia;
+  }
+  function noDuplicarEmails() {
+    let email = document.getElementById("crear-email").value;
+    let coincidencia = cuentasCreadas.some((element) => element.email === email);
+    console.log(email + " mail");
+    console.log(coincidencia + " coin");
+    return coincidencia;
+  }
 function redireccion(){
     window.location = "../pages/mi-cuenta.html"
 }
@@ -41,6 +56,12 @@ function pushAlArray(){
         document.getElementById("validar-contraseña").value = "";
     }else if(usuario.length > 8){
         swal("Error el nombre de usuario es de maximo 8 carácteres","Revise que el nombre de usuario tenga maximo 8 carácteres","error")
+    }else if(noDuplicarUsuarios()){
+        swal("Error nombre de usuario en uso","Por favor cambie el usuario","error")
+        document.getElementById("crear-usuario").value = "";
+    }else if(noDuplicarEmails()){
+        swal("Error, la dirección de email ya está en uso","Por favor cambie el email o inicie sesión","error")
+        document.getElementById("crear-email").value = "";
     }else{
         CuentasGuardadas.push(almacenador)
         swal({
@@ -49,7 +70,7 @@ function pushAlArray(){
             icon: "success",
             timer: 3000, 
             buttons: false, 
-          });
+            });
 
         document.getElementById("crear-email").value = "";
         document.getElementById("crear-usuario").value = "";
