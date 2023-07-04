@@ -2,6 +2,38 @@ let botonCrear = document.getElementById("boton-crear-cuenta")
 let CuentasGuardadas = [];
 let cuentasCreadas = JSON.parse(localStorage.getItem("cuentas-creadas")) || [];
 
+function renderBotonCarrito() {
+    const carro = JSON.parse(localStorage.getItem("carrito"));
+    let cantidadTotal = 0;
+    
+    if(carro === null){
+      const botonCarrito = document.getElementById("boton-carro");
+      const contenido = `
+      <button type="button" class="btn position-relative">
+        <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+        </span>
+      </button>
+    `;
+    botonCarrito.innerHTML = contenido;
+    }else{
+      for (const producto of carro) {
+        cantidadTotal += producto.cantidad;
+      }
+      const botonCarrito = document.getElementById("boton-carro");
+      const contenido = `
+        <button type="button" class="btn position-relative">
+          <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            ${cantidadTotal}
+          </span>
+        </button>
+      `;
+      botonCarrito.innerHTML = contenido;
+    }
+  }
+  renderBotonCarrito()
 function noDuplicarUsuarios() {
     let usuario = document.getElementById("crear-usuario").value;
     let coincidencia = cuentasCreadas.some((element) => element.usuario === usuario);
