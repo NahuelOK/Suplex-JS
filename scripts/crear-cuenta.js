@@ -1,6 +1,6 @@
 let botonCrear = document.getElementById("boton-crear-cuenta")
 let CuentasGuardadas = [];
-let cuentasCreadas = JSON.parse(localStorage.getItem("cuentas-creadas"));
+let cuentasCreadas = JSON.parse(localStorage.getItem("cuentas-creadas")) || [];
 
 function noDuplicarUsuarios() {
     let usuario = document.getElementById("crear-usuario").value;
