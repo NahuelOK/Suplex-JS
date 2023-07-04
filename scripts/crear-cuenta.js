@@ -111,12 +111,11 @@ function pushAlArray(){
         document.getElementById("crear-direccion").value = "";
         document.getElementById("crear-codigo-postal").value = "";
         document.getElementById("crear-numero-cel").value = "";
-        pais = document.getElementById("crear-pais").value = "";
+        document.getElementById("crear-pais").value = "";
 
-        function guardarEnLS() {
-            let CuentasEnLS = localStorage.getItem("cuentas-creadas");
-            if (CuentasEnLS) {
-                CuentasGuardadas = JSON.parse(CuentasEnLS);
+        function guardarEnLS(){
+            if (cuentasCreadas){
+                CuentasGuardadas = cuentasCreadas
             }
             CuentasGuardadas.push(almacenador);
             let CuentasGuarJson = JSON.stringify(CuentasGuardadas);
