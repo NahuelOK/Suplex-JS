@@ -30,3 +30,13 @@ function renderBotonCarrito() {
   }
 }
 renderBotonCarrito()
+function mostrarNick(){
+  let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
+  let nick = cuentaLogeada.usuario;
+  if(nick != "" || null){
+      mostrarUsuario.innerHTML = `<a class="nav-link" href="mi-cuenta.html">${nick}</a>
+  <img src="../assets/person-circle.svg" alt="user">`
+  }
+}
+
+mostrarNick()
