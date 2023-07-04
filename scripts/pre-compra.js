@@ -27,7 +27,7 @@ function preCompraRender() {
             <h4>Stock Disponible</h4>
             <form action="compra">
                 <div class="seleccionar">
-                    <label for="lista">Cantidad: </label>
+                    <label for="cantidad-select">Cantidad: </label>
                     <select id="cantidad-select">
                     <option value="1">1 Unidad</option>
                     <option value="2">2 Unidades</option>
