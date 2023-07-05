@@ -44,7 +44,7 @@ function guardarEnLS(){
     localStorage.setItem("productos", JSON.stringify(productos))
 }
 function cargarProdcutosLS(){
-   return JSON.parse(localStorage.getItem("productos")) 
+    return JSON.parse(localStorage.getItem("productos")) 
 }
 guardarEnLS()
 function preCompra(id){

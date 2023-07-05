@@ -6,35 +6,33 @@ if((carrito === null) ||(carrito.length === 0)){
   <a href="../index.html"><input class="boton-carro-vacio" type="button" value="EMPEZAR"></a>
   <h2 class="opciones-pago-carro">Todas las opciones de pago</h2>
   <img class="tarjetas" src="../assets/tarjetas.png" alt="tarjetas">
-</div>`;
+  </div>`;
 document.getElementById("tabla").innerHTML = contenido;
 
 function cargarCarroLS(){
   return JSON.parse(localStorage.getItem("carrito")) || [];
 }
-
 function cantidadProductosCarro(){
   const carrito = cargarCarroLS();
   return carrito.length;
 }
-
 function renderBotonCarrito(){
   let botonCarrito = document.getElementById("boton-carro")
   let contenido = 
   `<button type="button" class="btn position-relative">
-      <img class="carrito" src="../assets/Carro.png" alt="logo carro">
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     ${cantidadProductosCarro()}
-  </span>
-</button>`
-botonCarrito.innerHTML = contenido
+    </span>
+  </button>`
+  botonCarrito.innerHTML = contenido
 }
 renderBotonCarrito()
 }else{
   function renderCarro() {
     const carrito = JSON.parse(localStorage.getItem("carrito"));
     let contenido = "";
-    contenido += ` <thead>
+    contenido += `<thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Producto</th>
@@ -83,169 +81,163 @@ renderBotonCarrito()
   
     document.getElementById("tabla").innerHTML = contenido;
   }
+renderCarro();
+
+function cargarCarroLS(){
+  return JSON.parse(localStorage.getItem("carrito")) || [];
+}
+
+function guardarEnCarro(carrito){
+  const carritoNumerico = carrito.map((producto) => {
+    return {
+      ...producto,
+      precio: parseFloat(producto.precio)
+    };
+  });
+  localStorage.setItem("carrito", JSON.stringify(carritoNumerico));
+}
+function cantidadProductosCarro() {
+  const carrito = cargarCarroLS();
+  return carrito.length;
+}
+function renderBotonCarrito() {
+  let botonCarrito = document.getElementById("boton-carro");
+  let contenido = `<button type="button" class="btn position-relative">
+          <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        ${cantidadProductosCarro()}
+      </span>
+    </button>`;
+  botonCarrito.innerHTML = contenido;
+}
+renderBotonCarrito();
   
+function totalAPagar() {
+  const carrito = cargarCarroLS();
+  const total = carrito.reduce((acumulador, item) => {
+    const producto = item;
+    return acumulador + producto.precio;
+  }, 0);
+  return total;
+}
+  
+function borrarItem(id) {
+  let carro = JSON.parse(localStorage.getItem("carrito"));
+  let carroNuevo = carro.filter((item) => {
+    return item.id !== id; 
+  });
+  guardarEnCarro(carroNuevo);
   renderCarro();
+  renderBotonCarrito();
+}
+renderCarro();
   
-  function cargarCarroLS() {
-    return JSON.parse(localStorage.getItem("carrito")) || [];
-  }
+function cargarCarroLS(){
+  return JSON.parse(localStorage.getItem("carrito")) || [];
+}
+function guardarEnCarro(carrito) {
+  localStorage.setItem("carrito", JSON.stringify(carrito)); 
+}
+function cantidadProdcutosCarro(){
+  const carrito = cargarCarroLS();
+  return carrito.length; 
+}
+
+function renderBotonCarrito(){
+  const carro = JSON.parse(localStorage.getItem("carrito"));
+  let cantidadTotal = 0;
   
-  function guardarEnCarro(carrito) {
-    const carritoNumerico = carrito.map((producto) => {
-      return {
-        ...producto,
-        precio: parseFloat(producto.precio)
-      };
-    });
-    localStorage.setItem("carrito", JSON.stringify(carritoNumerico));
-  }
-      
-  
-  function cantidadProductosCarro() {
-    const carrito = cargarCarroLS();
-    return carrito.length;
-  }
-  
-  function renderBotonCarrito() {
-    let botonCarrito = document.getElementById("boton-carro");
-    let contenido = `<button type="button" class="btn position-relative">
-            <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+  if(carro === null){
+    const botonCarrito = document.getElementById("boton-carro");
+    const contenido = `
+    <button type="button" class="btn position-relative">
+      <img class="carrito" src="../assets/Carro.png" alt="logo carro">
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </button>
+  `;
+  botonCarrito.innerHTML = contenido;
+  }else{
+    for (const producto of carro) {
+      cantidadTotal += producto.cantidad;
+    }
+    const botonCarrito = document.getElementById("boton-carro");
+    const contenido = `
+      <button type="button" class="btn position-relative">
+        <img class="carrito" src="../assets/Carro.png" alt="logo carro">
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          ${cantidadProductosCarro()}
+          ${cantidadTotal}
         </span>
-      </button>`;
+      </button>
+    `;
     botonCarrito.innerHTML = contenido;
   }
-  
+}
+renderBotonCarrito()
+
+function totalAPagar(){
+  const carrito = cargarCarroLS();
+  const total = carrito.reduce((acumulador, item) => {
+    const producto = item;
+    return acumulador + producto.precio * producto.cantidad; 
+  }, 0);
+  return total;
+}
+
+function borrarItem(id){
+  let carro = JSON.parse(localStorage.getItem("carrito"));
+  let carroNuevo = carro.filter((item) =>{
+    const producto = item; 
+    return producto.id !== id;
+  });
+  guardarEnCarro(carroNuevo);
+  renderCarro();
   renderBotonCarrito();
-  
-  function totalAPagar() {
-    const carrito = cargarCarroLS();
-    const total = carrito.reduce((acumulador, item) => {
-      const producto = item;
-      return acumulador + producto.precio;
-    }, 0);
-    return total;
-  }
-  
-  function borrarItem(id) {
-    let carro = JSON.parse(localStorage.getItem("carrito"));
-    let carroNuevo = carro.filter((item) => {
-      return item.id !== id; 
-    });
-    guardarEnCarro(carroNuevo);
-    renderCarro();
-    renderBotonCarrito();
-  }
-    renderCarro();
-  
-    function cargarCarroLS(){
-      return JSON.parse(localStorage.getItem("carrito")) || [];
+  if(carro.length === 1){
+  location.reload();
     }
-    function guardarEnCarro(carrito) {
-      localStorage.setItem("carrito", JSON.stringify(carrito)); 
-    }
-    function cantidadProdcutosCarro(){
-      const carrito = cargarCarroLS();
-      
-      return carrito.length; 
-    }
-
-    function renderBotonCarrito() {
-      const carro = JSON.parse(localStorage.getItem("carrito"));
-      let cantidadTotal = 0;
-      
-      if(carro === null){
-        const botonCarrito = document.getElementById("boton-carro");
-        const contenido = `
-        <button type="button" class="btn position-relative">
-          <img class="carrito" src="../assets/Carro.png" alt="logo carro">
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            0
-          </span>
-        </button>
-      `;
-      botonCarrito.innerHTML = contenido;
-      }else{
-        for (const producto of carro) {
-          cantidadTotal += producto.cantidad;
-        }
-        const botonCarrito = document.getElementById("boton-carro");
-        const contenido = `
-          <button type="button" class="btn position-relative">
-            <img class="carrito" src="../assets/Carro.png" alt="logo carro">
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              ${cantidadTotal}
-            </span>
-          </button>
-        `;
-        botonCarrito.innerHTML = contenido;
-      }
-    }
-    renderBotonCarrito()
-  
-    function totalAPagar(){
-      const carrito = cargarCarroLS();
-      const total = carrito.reduce((acumulador, item) => {
-        const producto = item;
-        return acumulador + producto.precio * producto.cantidad; 
-      }, 0);
-      return total;
-    }
-
-  function borrarItem(id){
-    let carro = JSON.parse(localStorage.getItem("carrito"));
-    let carroNuevo = carro.filter((item) =>{
-      const producto = item; 
-      return producto.id !== id;
-    });
-    guardarEnCarro(carroNuevo);
-    renderCarro();
-    renderBotonCarrito();
-   if(carro.length === 1){
-    location.reload();
-  }
   }
 }
 function borrar1Item(id) {
-  let carro = JSON.parse(localStorage.getItem("carrito"));
-  for (i=0; i<carro.length; i++) {
-    if(carro[i].id === id){
-      if(carro[i].cantidad > 1){
-        carro[i].cantidad -= 1; 
-      } else {
-        carro.splice(i, 1);
-      }
-      break; 
+let carro = JSON.parse(localStorage.getItem("carrito"));
+for (i=0; i<carro.length; i++) {
+  if(carro[i].id === id){
+    if(carro[i].cantidad > 1){
+      carro[i].cantidad -= 1; 
+    } else {
+      carro.splice(i, 1);
     }
-  }
-  guardarEnCarro(carro);
-  renderCarro();
-  renderBotonCarrito();
-  if(carro.length === 0){
-    location.reload();
+    break; 
   }
 }
+guardarEnCarro(carro);
+renderCarro();
+renderBotonCarrito();
+if(carro.length === 0){
+  location.reload();
+}
+}
 
-function sum1Item(id) {
-  let carro = JSON.parse(localStorage.getItem("carrito"));
+function sum1Item(id){
+let carro = JSON.parse(localStorage.getItem("carrito"));
 
-  for (i=0; i<carro.length; i++) {
-    if(carro[i].id === id){
-      if(carro[i].cantidad > 0){
-        carro[i].cantidad += 1; 
-      } else {
-        carro.splice(i, 1);
-      }
-      break; 
+for (i=0; i<carro.length; i++) {
+  if(carro[i].id === id){
+    if(carro[i].cantidad > 0){
+      carro[i].cantidad += 1; 
+    } else {
+      carro.splice(i, 1);
     }
+    break; 
   }
-  guardarEnCarro(carro);
-  renderCarro();
-  renderBotonCarrito();
-  if(carro.length === 0){
-    location.reload();
-  }
+}
+guardarEnCarro(carro);
+renderCarro();
+renderBotonCarrito();
+if(carro.length === 0){
+  location.reload();
+}
 }
 let valorDefault = localStorage.getItem("compras-en-esta-sesion")
   ? parseInt(localStorage.getItem("compras-en-esta-sesion"))
@@ -276,4 +268,3 @@ function restablecerPagina(id){
     window.location = "../pages/mi-cuenta.html"
   }
 }
-

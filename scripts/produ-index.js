@@ -3,7 +3,7 @@ function renderMasVendido(){
   let masVendido = productos.filter(filtrarPorVendido);
   let contenido = ""; 
   
-  masVendido.forEach(producto => {
+  masVendido.forEach(producto =>{
       contenido += `<div class="producto">
       <div class="cont-img">
         <img src="${producto.img}" alt="ìmg">
@@ -24,7 +24,7 @@ function renderLoUltimo(){
   let loUltimo = productos.filter(filtrarPorNuevos);
   let contenido = ""; 
   
-  loUltimo.forEach(producto => {
+  loUltimo.forEach(producto =>{
       contenido += `<div class="producto">
       <div class="cont-img">
         <img src="${producto.img}" alt="ìmg">
@@ -58,7 +58,7 @@ function cantidadProdcutosCarro(){
   return carrito.length; 
   }
   
-  function renderBotonCarrito() {
+  function renderBotonCarrito(){
     const carro = JSON.parse(localStorage.getItem("carrito"));
     let cantidadTotal = 0;
     
@@ -89,7 +89,7 @@ function cantidadProdcutosCarro(){
       botonCarrito.innerHTML = contenido;
     }
   }
-  renderBotonCarrito()
+renderBotonCarrito()
 let mostrarUsuario = document.getElementById("nick-cuenta")
 function mostrarNick(){
   let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));

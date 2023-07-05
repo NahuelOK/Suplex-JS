@@ -20,7 +20,7 @@ function renderProteinas(){
     document.getElementById("tira1").innerHTML = contenido;
 }
 function filtrarPorCategoria(producto){
-    return producto.categoria == "P";
+  return producto.categoria == "P";
 }
 renderProteinas()
 
@@ -29,7 +29,6 @@ function cargarCarroLS(){
 }
 function cantidadProdcutosCarro(){
   const carrito = cargarCarroLS();
-  
   return carrito.length; 
   }
   

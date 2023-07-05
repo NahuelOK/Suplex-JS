@@ -2,7 +2,6 @@ function renderProteinas(){
   let productos = cargarProdcutosLS();
   let creatinas = productos.filter(filtrarPorCategoria);
   let contenido = ""; 
-  
   creatinas.forEach(producto => {
       contenido += `<div class="producto">
       <div class="cont-img">
@@ -29,10 +28,8 @@ function cargarCarroLS(){
 }
 function cantidadProdcutosCarro(){
   const carrito = cargarCarroLS();
-  
   return carrito.length; 
   }
-  
   function renderBotonCarrito() {
     const carro = JSON.parse(localStorage.getItem("carrito"));
     let cantidadTotal = 0;

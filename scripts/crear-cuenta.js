@@ -126,4 +126,3 @@ function pushAlArray(){
     }
 }
 botonCrear.addEventListener("click", pushAlArray)
-

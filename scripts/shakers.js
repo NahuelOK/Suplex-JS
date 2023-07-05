@@ -17,7 +17,7 @@ function renderShakers(){
       </div>
       </div>`
   });
-  document.getElementById("tira1").innerHTML = contenido;
+document.getElementById("tira1").innerHTML = contenido;
 }
 function filtrarPorCategoria(producto){
   return producto.categoria == "S";
@@ -33,7 +33,7 @@ function cantidadProdcutosCarro(){
   return carrito.length; 
   }
   
-  function renderBotonCarrito() {
+  function renderBotonCarrito(){
     const carro = JSON.parse(localStorage.getItem("carrito"));
     let cantidadTotal = 0;
     
@@ -64,4 +64,4 @@ function cantidadProdcutosCarro(){
       botonCarrito.innerHTML = contenido;
     }
   }
-  renderBotonCarrito()
+renderBotonCarrito()

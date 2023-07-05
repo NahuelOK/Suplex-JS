@@ -1,5 +1,5 @@
 window.onload = function() {
-    mostrarPagPerfil()
+  mostrarPagPerfil()
 };
 let cuentaLogeada = JSON.parse(localStorage.getItem("usuario-logeado"));
 let perfilCarga = document.getElementById("todo-perfil")
@@ -7,7 +7,6 @@ let comprasEnEstaSesion = JSON.parse(localStorage.getItem("compras-en-esta-sesio
 if(comprasEnEstaSesion === null){
   comprasEnEstaSesion = 0
 }
-
 function renderBotonCarrito() {
   const carro = JSON.parse(localStorage.getItem("carrito"));
   let cantidadTotal = 0;
@@ -93,7 +92,6 @@ function mostrarPagPerfil(){
         div.innerHTML = contenido
         perfilCarga.appendChild(div);
     }
-    
 }
 
 function cerrarSesion(){
@@ -112,4 +110,3 @@ function cerrarSesion(){
       }, 1800);
 }
 let botonCerrarSesion = document.getElementById("cerrar-cuenta")
-

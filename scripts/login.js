@@ -1,11 +1,11 @@
 let botonLogin = document.getElementById("login");
 function redireccion(){
-    window.location = "../index.html"
+  window.location = "../index.html"
 }
 function escucharEnter(evento){
-    if (evento.key === "Enter") {
-        traerCuentasLS();
-    }
+  if (evento.key === "Enter") {
+    traerCuentasLS();
+  }
 }
 function traerCuentasLS(){
     let emailIngresado = document.getElementById("email-login").value
@@ -22,7 +22,7 @@ function traerCuentasLS(){
     }
 
     const cuentaEncontrada = CuentasEnLSJson.find(cuenta => {
-        return cuenta.email === emailIngresado && cuenta.contraseña === contraseñaIngresada;
+      return cuenta.email === emailIngresado && cuenta.contraseña === contraseñaIngresada;
     });
 
     if (cuentaEncontrada) {

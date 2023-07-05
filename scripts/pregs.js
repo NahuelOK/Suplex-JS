@@ -1,4 +1,4 @@
-function renderBotonCarrito() {
+function renderBotonCarrito(){
   const carro = JSON.parse(localStorage.getItem("carrito"));
   let cantidadTotal = 0;
   
@@ -14,7 +14,7 @@ function renderBotonCarrito() {
   `;
   botonCarrito.innerHTML = contenido;
   }else{
-    for (const producto of carro) {
+    for (const producto of carro){
       cantidadTotal += producto.cantidad;
     }
     const botonCarrito = document.getElementById("boton-carro");

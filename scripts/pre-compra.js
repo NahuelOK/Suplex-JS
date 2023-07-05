@@ -1,4 +1,4 @@
-function preCompraRender() {
+function preCompraRender(){
     const producto = JSON.parse(localStorage.getItem("producto"));
     let contenido = `
       <div class="pre-compra">
@@ -58,30 +58,28 @@ function preCompraRender() {
       </div>`;
     document.getElementById("main-preCompra").innerHTML = contenido;
   }
-  
-  preCompraRender();
-  
-  function guardarEnCarro(carrito) {
+preCompraRender();
+  function guardarEnCarro(carrito){
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
-  
-  function cargarCarroLS() {
+
+  function cargarCarroLS(){
     return JSON.parse(localStorage.getItem("carrito")) || [];
   }
-  
-  function estaAgregado(id) {
+
+  function estaAgregado(id){
     const carrito = cargarCarroLS();
     return carrito.some((item) => item.id === id);
   }
-  
-  function pushCarro(id) {
+
+  function pushCarro(id){
     const productoCargado = JSON.parse(localStorage.getItem("producto"));
     const carrito = cargarCarroLS();
     const selectElement = document.getElementById("cantidad-select");
     const cantidadSelect = selectElement.options[selectElement.selectedIndex].value;
     const cantidad = parseInt(cantidadSelect);
   
-    if (estaAgregado(id)) {
+    if (estaAgregado(id)){
       const pos = carrito.findIndex((item) => item.id === id);
       carrito[pos].cantidad += cantidad;
       Toastify({
@@ -109,14 +107,14 @@ function preCompraRender() {
     guardarEnCarro(carrito);
     renderBotonCarrito();
   }
-  function comprarYa(id) {
+  function comprarYa(id){
     const productoCargado = JSON.parse(localStorage.getItem("producto"));
     const carrito = cargarCarroLS();
     const selectElement = document.getElementById("cantidad-select");
     const cantidadSelect = selectElement.options[selectElement.selectedIndex].value;
     const cantidad = parseInt(cantidadSelect);
 
-    if (estaAgregado(id)) {
+    if (estaAgregado(id)){
       const pos = carrito.findIndex((item) => item.id === id);
       carrito[pos].cantidad += cantidad;
     } else {
@@ -126,12 +124,12 @@ function preCompraRender() {
     guardarEnCarro(carrito);
     renderBotonCarrito();
   }
-  function cantidadProdcutosCarro() {
+  function cantidadProdcutosCarro(){
     const carrito = cargarCarroLS();
     return carrito.length;
   }
   
-  function renderBotonCarrito() {
+  function renderBotonCarrito(){
     const carro = JSON.parse(localStorage.getItem("carrito"));
     let cantidadTotal = 0;
     
@@ -162,5 +160,4 @@ function preCompraRender() {
       botonCarrito.innerHTML = contenido;
     }
   }
-  renderBotonCarrito()
-  
+renderBotonCarrito()
