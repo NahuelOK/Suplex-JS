@@ -83,7 +83,7 @@ function pushAlArray(){
         document.getElementById("crear-contraseña").value = "";
         document.getElementById("validar-contraseña").value = "";
     }else if(contraseña.length < 8){
-        swal("Error la contraseña es demaciado corta","Revise que la contraseña tenga minimo 8 carácteres","error")
+        swal("Error la contraseña es demasiado corta","Revise que la contraseña tenga minimo 8 carácteres","error")
         document.getElementById("crear-contraseña").value = "";
         document.getElementById("validar-contraseña").value = "";
     }else if(usuario.length > 8){
